@@ -141,7 +141,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 /*  input value properties */
 
-.enterName {
+.enterName,.createPasswordInput,.verifyPasswordInput {
+ 
     width:50%;
     font-size: 3.4rem;
     margin-top: 1rem;
@@ -155,34 +156,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
     z-index: 0;
 }
-.createPasswordInput {
-    width:50%;
-    font-size: 3.4rem;
-    margin-top: 1rem;
-    font-weight: 500;
-    border:none;
-    background: transparent;
-    outline: none;
-    border-bottom: 2px solid #fff;
-    color:#fff;
-    text-align: center;
-    text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
-    z-index: 0;
-}
-.verifyPasswordInput {
-    width:70%;
-    font-size: 3.4rem;
-    margin-top: 1rem;
-    font-weight: 500;
-    border:none;
-    background: transparent;
-    outline: none;
-    border-bottom: 2px solid #fff;
-    color:#fff;
-    text-align: center;
-    text-shadow: 1px 1px 4px 5px rgb(173, 169, 169);
-    z-index: 0;
-}
+ 
 /* print the name to main page */
 .userName {
     font-size: 2.812rem;;
@@ -603,6 +577,13 @@ h3 {
       justify-content: center;
         text-align: center;
     }
+    .hey3 {
+        padding-right: 60px;
+    }
+    .verifyPasswordInput{
+        text-align: center;
+        margin-right: 100px;
+    }
 }
 @media screen and (max-width:768px ) {
     html {
@@ -625,6 +606,13 @@ h3 {
         top:10px;
         text-align: center;
         display: block;
+    }
+    .hey3 {
+        padding-right: 60px;
+    }
+    .verifyPasswordInput{
+        text-align: center;
+        margin-right: 100px;
     }
 }
 @media screen and (max-width:1024px ) {
@@ -649,6 +637,13 @@ h3 {
         top:10px;
         text-align: center;
         display: block;
+    }
+    .hey3 {
+        padding-right: 60px;
+    }
+    .verifyPasswordInput{
+        text-align: center;
+        margin-right: 100px;
     }
     
 }
