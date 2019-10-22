@@ -12,7 +12,7 @@ let login1 = document.querySelector('.login');
 let createPasswordContainer = document.querySelector('.passwordCreate');
 let verifyPasswordContainer = document.querySelector('.passwordVerify');
 let inputArr = JSON.parse(localStorage.getItem('arr-list')) || [];
-console.log(inputArr);
+// console.log(inputArr);
 
 let inputValue = {
     name: "",
@@ -25,15 +25,15 @@ function checkLogin (){
         login1.classList.add('login1');
         createPasswordContainer.classList.add('passwordCreateRemove');
         verifyPasswordContainer.classList.add('passwordVerifyRemove');
-        console.log('input Arr inside chek',inputArr)
+        // console.log('input Arr inside chek',inputArr)
         name = inputArr[0].name
         userName.innerText = name[0].toUpperCase() + name.slice(1);
-        console.log('username',name[0].toUpperCase() + name.slice(1))
+        // console.log('username',name[0].toUpperCase() + name.slice(1))
         document.body.classList.add('body');
         containerAll.classList.add('allContainer');
     }
     else{
-        console.log('before set state')
+        // console.log('before set state')
         inputArr = []
         localStorage.setItem('arr-list',JSON.stringify(inputArr))
     }
@@ -48,7 +48,7 @@ function login (event) {
         inputArr.push(inputValue);
         login1.classList.add('login1');
         createPasswordContainer.classList.add('passwordCreateAdd');
-        console.log('im in');
+        // console.log('im in');
         hey.value = "";
         // inputView(inputArr) 
     }
@@ -66,16 +66,16 @@ function createPassword (event) {
     }
     localStorage.setItem('arr-list', JSON.stringify(inputArr));
 }
-console.log(inputArr);
+// console.log(inputArr);
 
 // TEST
-console.log(localStorage, 'Check local storage')
+// console.log(localStorage, 'Check local storage')
 // if (localStorage)
 // 
 function verifyPassword (event) {
     if (event.keyCode === 13 && event.target.value.trim() != ''){
         let match = event.target.value;
-        console.log('lol', match, inputArr[0].password);
+        // console.log('lol', match, inputArr[0].password);
         if (match == inputArr[0].password) {
         verifyPasswordContainer.classList.add('passwordVerifyRemove');
         document.body.classList.add('body');
@@ -83,7 +83,7 @@ function verifyPassword (event) {
         } 
     }
     localStorage.setItem('arr-list', JSON.stringify(inputArr));   
-    console.log('outside lol');
+    // console.log('outside lol');
 }
 
     
@@ -292,7 +292,7 @@ function handleSubmit (event){
         todoText.text = input.value;
         todoList.push(todoText);
         input.style.border = "none";
-        console.log(todoList);
+        // console.log(todoList);
         document.querySelector(".input_container .i").classList.add("i_");
         document.querySelector(".input_container .i").style.opacity = 0.2;
         document.querySelector(".foot").classList.add("footer_container");
@@ -301,10 +301,10 @@ function handleSubmit (event){
     }
 }    
     function deleteSubmit (event) {
-        console.log('inside delete',event)
+        // console.log('inside delete',event)
         var index = event.target.dataset.id
         // if(event.target.classList.contains("del")){
-            console.log('inside delete if')
+            // console.log('inside delete if')
         todoList.splice(index,1);
         // }
         view(todoList);
@@ -313,15 +313,15 @@ function handleSubmit (event){
     
 
     function handleCheck (event) {
-        console.log("handle check",event);
+        // console.log("handle check",event);
         var id = event.target.dataset.id;
-        console.log(id);
+        // console.log(id);
         todoList[id].isDone = !todoList[id].isDone;
         view(todoList)
 
 }
     function completed () {
-        console.log('inside complete')
+        // console.log('inside complete')
         const isChecked = todoList.filter((item) => {
             allTodo2.classList.remove('all');
             activeTodo.classList.remove('active1');
@@ -376,7 +376,7 @@ function handleSubmit (event){
     }
     function selectAll (event){
         const falsed = todoList.filter(item => item.isDone == false)
-        console.log(falsed.length); 
+        // console.log(falsed.length); 
         if(falsed.length == 0){
             todoList.forEach((item) => {
                 selectAllTodo.style.opacity = 0.2;
